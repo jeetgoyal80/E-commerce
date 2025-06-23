@@ -1,0 +1,120 @@
+.checkout__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+}
+
+.checkout__container h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.checkout__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.checkout__form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout__form h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.checkout__form input {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.checkout__form input:focus {
+  border-color: #000;
+}
+
+.checkout__form label {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkout__submit {
+  margin-top: 20px;
+  background-color: #222;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.checkout__submit:hover {
+  background-color: #000;
+}
+
+.checkout__summary {
+  flex: 1;
+  min-width: 280px;
+  background-color: #f9f9f9;
+  padding: 20px 25px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.checkout__summary h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.checkout__summary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.checkout__summary ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.checkout__summary p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout__content {
+    flex-direction: column;
+  }
+
+  .checkout__form, .checkout__summary {
+    width: 100%;
+  }
+}

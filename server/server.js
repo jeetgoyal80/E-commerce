@@ -3,17 +3,28 @@ const app = express()
 const cors = require("cors")
 require("dotenv").config()
 const connectDB = require("./config/db")
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 4000
+const morgan = require('morgan');
 
-// middlewares
+// ✅ connect to the mongodb database
+connectDB()
+
+// ✅ GLOBAL MIDDLEWARES
+app.use(cors({
+  origin: 'http://localhost:3000',  // or your frontend URL
+  credentials: true,                // allow cookies if used
+}));
 app.use(express.json())
-app.use(express.urlencoded({extended: false}))
-app.use(express.static("public"));
+app.use(express.urlencoded({ extended: false }))
+app.use(express.static("public"))
+app.use(morgan('dev'))
 
-// connect to the mongodb database
-/* connectDB() */
-
+// ✅ ROUTES
 app.use('/api/items', require("./routes/items"))
-app.use('/api/payment', cors(), require("./routes/payment"))
+app.use('/api/user', require("./routes/authRoutes"))
+app.use('/api/payment', require("./routes/payment"))
 
-app.listen(PORT, console.log("Server is running on port ", PORT))
+// ✅ START SERVER
+app.listen(PORT, () => {
+  console.log("Server is running on port", PORT)
+})
