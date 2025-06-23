@@ -28,7 +28,7 @@ const RegisterCard = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${process.env.REACT_BACKEND_URL}/api/user/register`, formData, {
+      const response = await axios.post(`https://e-commerce-33ek.onrender.com/api/user/register`, formData, {
         timeout: 5000,
       });
 
