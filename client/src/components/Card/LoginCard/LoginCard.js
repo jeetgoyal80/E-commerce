@@ -19,7 +19,7 @@ const LoginCard = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post(`${process.env.REACT_BACKEND_URL}/api/user/login`, {
+      const response = await axios.post(`https://e-commerce-33ek.onrender.com/api/user/login`, {
         email,
         password,
       });
