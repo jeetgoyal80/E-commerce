@@ -11,7 +11,7 @@ connectDB()
 
 // ✅ GLOBAL MIDDLEWARES
 app.use(cors({
-  origin: 'http://localhost:3000',  // or your frontend URL
+  origin: 'https://client-iota-gray.vercel.app',  // or your frontend URL
   credentials: true,                // allow cookies if used
 }));
 app.use(express.json())
